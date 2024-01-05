@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 
 /**
@@ -7,7 +7,6 @@
  * @argv: argument values
  * Return: EXIT_SUCCESS on success, EXIT_FAILURE on failure
  */
-
 int main(int argc, char *argv[])
 {
 	FILE *file;
