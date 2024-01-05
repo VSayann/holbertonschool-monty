@@ -7,9 +7,9 @@
  * @line_number: line number in the file
  */
 
-void pint(stack_p **stack, unsigned int line_number)
+void pint(stack_t **stack, unsigned int line_number)
 {
-	stack_p *node = *stack;
+	stack_t *node = *stack;
 	(void)line_number;
 
 	if (node == NULL)
