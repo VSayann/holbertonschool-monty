@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "main.h"
 
 /**
  * opcodes - compares opcodes to sub-functions and call it

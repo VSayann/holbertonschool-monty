@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "main.h"
 
 /**
  * pop - removes the top element of the stack
