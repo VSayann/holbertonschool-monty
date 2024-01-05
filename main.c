@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 
 /**
@@ -10,6 +10,11 @@
 int main(int argc, char *argv[])
 {
 	FILE *file;
+	char *line = NULL, *opcode;
+	size_t len = 0;
+	ssize_t read;
+	stack_t *stack = NULL;
+	unsigned int line_number = 0;
 
 	if (argc != 2)
 	{
@@ -23,6 +28,18 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
+	while ((read = getline(&line, &len, file)) != -1)
+	{
+		line_number++;
+		opcode = strtok(line, " \n\t\r");
+
+		if (opcode != NULL && opcode[0] != '#')
+		{
+			opcodes(&stack, line_number, opcode);
+		}
+	}
 	fclose(file);
+	free(line);
+	free_stack(&stack);
 	return (EXIT_SUCCESS);
 }
