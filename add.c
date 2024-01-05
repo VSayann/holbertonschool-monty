@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "main.h"
 
 /**
  * add - sum of the top two integers of the stack
