@@ -1,5 +1,8 @@
 #include "main.h"
 
+void push(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number); // Add this line
+
 /**
  * opcodes - compares opcodes to sub-functions and call it
  * @stack: pointer to the stack
@@ -11,10 +14,10 @@ void opcodes(stack_t **stack, unsigned int line_number, char *opcode)
 	int index;
 
 	instruction_t opcodes[] = {
-		{"push", push},
 		{"pall", pall},
 		{"pop", pop},
 		{"pint", pint},
+		{"push", push},
 		{NULL, NULL}
 	};
 
